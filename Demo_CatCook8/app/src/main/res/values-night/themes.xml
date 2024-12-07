@@ -1,0 +1,8 @@
+<!-- night/themes.xml -->
+<resources>
+    <style name="Base.Theme.Demo_CatCook" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="Theme.Demo_CatCook" parent="Base.Theme.Demo_CatCook" />
+</resources>

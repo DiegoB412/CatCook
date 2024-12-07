@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgDetalleReceta"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/txtNombreDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:text="..."
+            android:layout_gravity="center"
+            android:textColor="@color/Ambar800"
+            android:fontFamily="@font/archivo_semibold"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/txtDescripcionDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="..."
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/GreyDeepDark"
+            android:fontFamily="@font/archivo_medium"
+            android:layout_marginTop="8dp" />
+        <TextView
+            android:id="@+id/txtDificultadDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="..."
+            android:textColor="@color/GreyDark"
+            android:fontFamily="@font/archivo"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/txtTiempoDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="..."
+            android:textColor="@color/GreyDark"
+            android:fontFamily="@font/archivo"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Ingredientes: "
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/archivo_semibold"/>
+
+        <TextView
+            android:id="@+id/txtIngredientesDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/archivo_medium"
+            android:text="..."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="14dp"
+            android:textStyle="italic"
+            android:fontFamily="@font/archivo_semibold"
+            android:textColor="@color/black"
+            android:text="Instrucciones:"/>
+
+        <TextView
+            android:id="@+id/txtInstruccionesDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="..."
+            android:textSize="16sp"
+            android:fontFamily="@font/archivo_medium"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

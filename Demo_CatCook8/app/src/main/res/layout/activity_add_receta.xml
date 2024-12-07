@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".AddReceta">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¡Agrega una nueva receta personal!"
+                android:fontFamily="@font/archivo_semibold"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="16dp"/>
+            <Switch
+                android:id="@+id/switchVisibilidad"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:text="Hacer pública la receta" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/archivo_semibold"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.131"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.06" />
+
+            <EditText
+                android:id="@+id/editTextNombre"
+                android:layout_width="281dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_background"
+                android:ems="10"
+                android:hint="  Nombre de la receta"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.341"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.093" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:fontFamily="@font/archivo_semibold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/editTextDescripcion"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_background"
+                android:hint="  Describe tu receta"
+                android:layout_gravity="center"/>
+
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingredientes:"
+                android:fontFamily="@font/archivo_semibold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.131"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.443" />
+
+
+            <ScrollView
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:background="@drawable/rounded_background"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDescripcion"
+                app:layout_constraintVertical_bias="0.28">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextIngrediente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:hint="Ingredientes necesarios"
+                    android:inputType="textMultiLine"
+                    android:textSize="16sp"
+                    android:lines="5"
+                    android:maxLines="10"
+                    android:padding="10dp"
+                    android:scrollbars="vertical" />
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instrucciones:"
+                android:fontFamily="@font/archivo_semibold"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.142"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.585" />
+
+            <ScrollView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_background"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDescripcion"
+                app:layout_constraintVertical_bias="0.28">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextInstrucciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:hint="Instrucciones de la receta"
+                    android:inputType="textMultiLine"
+                    android:textSize="16sp"
+                    android:lines="5"
+                    android:maxLines="10"
+                    android:padding="10dp"
+                    android:scrollbars="vertical" />
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tiempo de preparación:"
+                android:fontFamily="@font/archivo_semibold"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.174"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.181" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/spinnerDificultad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNombre">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextTiempoPreparacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:hint="Tiempo de preparación (HH:mm:ss)"
+                    android:importantForAccessibility="yes"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Dificultad:"
+                android:fontFamily="@font/archivo_semibold"
+                android:textColor="@color/black"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.131"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.298" />
+
+            <Spinner
+                android:id="@+id/spinnerDificultad"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_background"
+                android:entries="@array/opciones_dificultad"
+                android:layout_gravity="center"
+                android:spinnerMode="dropdown"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.405"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.358" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Selecciona una imagen para tu receta (opcional)"
+                android:textColor="@color/black"
+                android:fontFamily="@font/archivo_medium"
+                android:textStyle="italic"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageButton
+                android:id="@+id/btnImagenRecetaPersonal"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_upload_cloud"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:contentDescription="Subir imagen"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/botonGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Guardar"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.891" />
+
+        </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

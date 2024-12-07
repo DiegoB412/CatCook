@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- SearchView para buscar ingredientes -->
+    <SearchView
+        android:id="@+id/searchViewIngredientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Buscar ingrediente" />
+
+    <!-- RecyclerView para mostrar ingredientes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewIngredientes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+    <!-- Contenedor para agregar al inventario -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Spinner para unidad de medida -->
+        <Spinner
+            android:id="@+id/spinnerUnidadMedida"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <!-- EditText para cantidad -->
+        <EditText
+            android:id="@+id/editTextCantidad"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Cantidad"
+            android:inputType="numberDecimal" />
+
+        <!-- Botón para guardar -->
+        <Button
+            android:id="@+id/buttonGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar en inventario" />
+    </LinearLayout>
+</LinearLayout>

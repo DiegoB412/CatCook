@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageViewUsuarioValoracion"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_usuario" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewNombreUsuarioValoracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del usuario"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewComentario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comentario del usuario" />
+
+        <RatingBar
+            android:id="@+id/ratingBarItem"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="4"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:progressTint="@color/Ambar800"
+            android:secondaryProgressTint="@color/Ambar"
+            android:backgroundTint="@color/blueGreyMid"
+            android:stepSize="0.1" />
+    </LinearLayout>
+</LinearLayout>
+

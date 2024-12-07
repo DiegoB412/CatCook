@@ -1,0 +1,81 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragment.FragmentRecetas">
+
+    <!-- Contenido Principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="0dp"
+            android:background="@drawable/layout_redondeado">
+
+            <TextView
+                android:id="@+id/textBienvenido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/archivo_semibold"
+                android:text="¡BIENVENIDO!"
+                android:layout_gravity="center"
+                android:textColor="#111111"
+                android:textSize="25sp" />
+
+            <SearchView
+                android:id="@+id/txtBuscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/text_buscar"
+                app:queryHint="¿Qué buscas preparar hoy?" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/switchRecetas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:checked="false"
+                    android:fontFamily="@font/archivo_semibold"
+                    android:gravity="center"
+                    android:text="Recetas de usuarios"
+                    android:textColor="@color/white"
+                    android:thumbTint="@color/thumb_color"
+                    android:trackTint="@color/track_color"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                <Spinner
+                    android:id="@+id/spinnerCategoria"
+                    android:layout_width="150sp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center_vertical"
+                    android:entries="@array/categorias_array" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="35dp"
+            android:paddingBottom="30dp" />
+    </LinearLayout>
+</FrameLayout>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- rounded_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/RojoA400" /> <!-- Cambia el color de fondo según lo necesites -->
+    <corners
+        android:bottomLeftRadius="30dp"
+        android:bottomRightRadius="30dp"
+        android:topLeftRadius="0dp"
+        android:topRightRadius="0dp" /><!-- Ajusta el radio para redondear los bordes -->
+    <stroke android:width="2dp" android:color="#111111" /> <!-- Bordes opcionales -->
+</shape>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Demo_CatCook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agregar_nueva_receta">Agregar nueva receta</string>
+    <string-array name="opciones_dificultad">
+        <item>facil</item>
+        <item>media</item>
+        <item>difícil</item>
+    </string-array>
+
+    <string-array name="unidades_medida">
+        <item>litros</item>
+        <item>mililitros</item>
+        <item>kilos</item>
+        <item>cucharadas</item>
+        <item>tazas</item>
+        <item>unidades</item>
+    </string-array>
+
+    <string-array name="categorias_array">
+        <item>Entradas</item>
+        <item>Sopas</item>
+        <item>Ensaladas</item>
+        <item>Platos principales</item>
+        <item>Desayunos</item>
+        <item>Acompañamientos</item>
+        <item>Bebidas</item>
+        <item>Postres</item>
+    </string-array>
+
+</resources>
